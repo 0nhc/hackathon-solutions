@@ -11,5 +11,5 @@ git clone https://github.com/nu-wild-rabbit/hackathon-solutions.git
 
 ## Run the Demo
 ```python
-pyhton3 main.py
+python3 main.py
 ```
