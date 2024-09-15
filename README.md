@@ -3,10 +3,10 @@
 ## Installation
 ```sh
 # For SSH Users
-git clone git@github.com:0nhc/hackathon-solution.git
+git clone git@github.com:0nhc/hackathon-solutions.git
 
 # For HTTPS Users
-git clone https://github.com/0nhc/hackathon-solution.git
+git clone https://github.com/0nhc/hackathon-solutions.git
 ```
 
 ## Run the Demo
