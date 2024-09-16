@@ -21,3 +21,13 @@ class Stack:
         
     def pop(self):
         return self.data.pop()
+    
+class Queue:
+    def __init__(self) -> None:
+        self.data = []
+        
+    def push(self, push_data):
+        self.data.append(push_data)
+        
+    def pop(self):
+        return self.data.pop(0)

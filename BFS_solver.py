@@ -1,4 +1,4 @@
-from data_structure import Node, Stack
+from data_structure import Queue
 from maze import Maze
 from state_define import *
 from maze_visualizer import MazeVisualizer
@@ -7,62 +7,45 @@ import numpy as np
 class BFSSolver:
     def __init__(self, maze=Maze()) -> None:
         self.maze = maze
-        self.visiting_stack = Stack()
+        self.visiting_queue = Queue()
         self.visited_node_indices = []
         self.visualizer = MazeVisualizer()
-        
+            
+            
     def find_the_goal(self):
-        # Display first
-        self.visualizer.display_single_state(self.maze.as_matrix(), interval=2.0)
-        
         # Main loop
-        self.visiting_stack.push(self.maze.start_node_index)
+        self.visiting_queue.push(self.maze.start_node_index)
         found_the_goal = False
         score = 0
         while(found_the_goal == False):
-        # for i in range(2):
-            # Change all visiting nodes'state to VISITING for visualizing
-            for visiting_node_index in self.visiting_stack.data:
-                visiting_node = self.maze.nodes[visiting_node_index]
-                if(visiting_node.state == FREE):
-                    self.maze.nodes[visiting_node.index].state = VISITING
-            self.visualizer.display_single_state(self.maze.as_matrix(), interval=0.01)
-            
             # Check if current stack has nodes adjacent to the goal
-            for visiting_node_index in self.visiting_stack.data:
+            for visiting_node_index in self.visiting_queue.data:
                 visiting_node = self.maze.nodes[visiting_node_index]
                 neighbours = visiting_node.neighbours
                 for neighbour_position in neighbours:
                     neighbour_index = self.maze.position_to_node_index_table[str(neighbour_position)]
                     if(neighbour_index == self.maze.goal_node_index):
-                        # Change al VISITING nodes' state to VISITED and exit the for loop
-                        # for visiting_node_index in self.visiting_stack.data:
-                        #     self.maze.nodes[visiting_node_index].state = VISITED
-                        # self.visualizer.display_single_state(self.maze.as_matrix(), interval=3.0)
                         found_the_goal = True
                 
-            # Get all neighbours of current visiting nodes
-            neighbour_indices = []
-            for visiting_node_index in self.visiting_stack.data:
+            # Get all neighbours of current visiting nodes and update their states
+            num_nodes_in_the_queue = len(self.visiting_queue.data)
+            neighbour_indices_to_be_visited = []
+            for i in range(num_nodes_in_the_queue):
+                visiting_node_index = self.visiting_queue.pop()
                 visiting_node = self.maze.nodes[visiting_node_index]
+                if(visiting_node.state == VISITING):
+                    self.maze.nodes[visiting_node.index].state = VISITED
                 neighbours = visiting_node.neighbours
                 for neighbour_position in neighbours:
                     neighbour_index = self.maze.position_to_node_index_table[str(neighbour_position)]
-                    if neighbour_index not in self.visited_node_indices:
+                    if(neighbour_index not in neighbour_indices_to_be_visited):
+                        # Visit the neighbour and change its state and score
                         if(self.maze.nodes[neighbour_index].state == FREE):
-                            neighbour_indices.append(neighbour_index)
-                            self.visited_node_indices.append(neighbour_index)
+                            self.maze.nodes[neighbour_index].score = score
+                            self.maze.nodes[neighbour_index].state = VISITING
+                            self.visiting_queue.push(neighbour_index)
+                            neighbour_indices_to_be_visited.append(neighbour_index)
             
-            # Update visiting nodes
-            # Changing visiting nodes' states and turn them to VISITED
-            while(len(self.visiting_stack.data) != 0):
-                visited_node_index = self.visiting_stack.pop()
-                self.maze.nodes[visited_node_index].score = score
-                if(self.maze.nodes[visited_node_index].state != START):
-                    self.maze.nodes[visited_node_index].state = VISITED
-            # Change neighbours as visiting nodes
-            for index in neighbour_indices:
-                self.visiting_stack.push(index)
             self.visualizer.display_single_state(self.maze.as_matrix(), interval=0.01)
             
             # Update score
