@@ -8,7 +8,6 @@ class BFSSolver:
     def __init__(self, maze=Maze()) -> None:
         self.maze = maze
         self.visiting_queue = Queue()
-        self.visited_node_indices = []
         self.visualizer = MazeVisualizer()
             
             
@@ -73,7 +72,7 @@ class BFSSolver:
             path_node_indices.append(minimum_index)
             self.maze.nodes[minimum_index].state = FINAL_PATH
             current_index = minimum_index
-            self.visualizer.display_single_state(self.maze.as_matrix(), interval=0.01)
+            # self.visualizer.display_single_state(self.maze.as_matrix(), interval=0.01)
             
             # Check if current node has reached the start node
             neighbours = self.maze.nodes[current_index].neighbours

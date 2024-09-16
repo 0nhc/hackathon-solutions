@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NU Wild Rabbit&#39;s Solutions for the NU MSR Hackathon 2024: data_structure.Queue Class Reference</title>
+<title>NU Wild Rabbit&#39;s Solutions for the NU MSR Hackathon 2024: data_structure.GraphNode Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,70 +70,62 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>data_structure</b></li><li class="navelem"><a class="el" href="classdata__structure_1_1Queue.html">Queue</a></li>  </ul>
+<li class="navelem"><b>data_structure</b></li><li class="navelem"><a class="el" href="classdata__structure_1_1GraphNode.html">GraphNode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="classdata__structure_1_1Queue-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">data_structure.Queue Class Reference</div></div>
+<a href="classdata__structure_1_1GraphNode-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">data_structure.GraphNode Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5985e42fd080c04dde5622d4d6133818" id="r_a5985e42fd080c04dde5622d4d6133818"><td class="memItemLeft" align="right" valign="top"><a id="a5985e42fd080c04dde5622d4d6133818" name="a5985e42fd080c04dde5622d4d6133818"></a>
-None&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self)</td></tr>
-<tr class="separator:a5985e42fd080c04dde5622d4d6133818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed28d9bba618246b79ad3a79fa8e281" id="r_a8ed28d9bba618246b79ad3a79fa8e281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__structure_1_1Queue.html#a8ed28d9bba618246b79ad3a79fa8e281">push</a> (self, push_data)</td></tr>
-<tr class="separator:a8ed28d9bba618246b79ad3a79fa8e281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d58dd944ec08ea8f0924e50e00af819" id="r_a2d58dd944ec08ea8f0924e50e00af819"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__structure_1_1Queue.html#a2d58dd944ec08ea8f0924e50e00af819">pop</a> (self)</td></tr>
-<tr class="separator:a2d58dd944ec08ea8f0924e50e00af819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680be4e4029d8585143f928f3a7d037e" id="r_a680be4e4029d8585143f928f3a7d037e"><td class="memItemLeft" align="right" valign="top"><a id="a680be4e4029d8585143f928f3a7d037e" name="a680be4e4029d8585143f928f3a7d037e"></a>
+None&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, position=[0, 0], index=0, neighbours=[], state=-1, score=np.inf)</td></tr>
+<tr class="separator:a680be4e4029d8585143f928f3a7d037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264ca6207ad939a2ecfe5296918fa73e" id="r_a264ca6207ad939a2ecfe5296918fa73e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__structure_1_1GraphNode.html#a264ca6207ad939a2ecfe5296918fa73e">set_neighbours</a> (self, neighbours)</td></tr>
+<tr class="separator:a264ca6207ad939a2ecfe5296918fa73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5b94a57f402ef67548524f64fd405760" id="r_a5b94a57f402ef67548524f64fd405760"><td class="memItemLeft" align="right" valign="top"><a id="a5b94a57f402ef67548524f64fd405760" name="a5b94a57f402ef67548524f64fd405760"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
-<tr class="separator:a5b94a57f402ef67548524f64fd405760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bffb6af0af1d773d17cf8b1e49b53a" id="r_af4bffb6af0af1d773d17cf8b1e49b53a"><td class="memItemLeft" align="right" valign="top"><a id="af4bffb6af0af1d773d17cf8b1e49b53a" name="af4bffb6af0af1d773d17cf8b1e49b53a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:af4bffb6af0af1d773d17cf8b1e49b53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760ae0a48f3f9f148a1d3fa475820674" id="r_a760ae0a48f3f9f148a1d3fa475820674"><td class="memItemLeft" align="right" valign="top"><a id="a760ae0a48f3f9f148a1d3fa475820674" name="a760ae0a48f3f9f148a1d3fa475820674"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
+<tr class="separator:a760ae0a48f3f9f148a1d3fa475820674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c86cc64e596ebc9f16e50bb593ab8f4" id="r_a2c86cc64e596ebc9f16e50bb593ab8f4"><td class="memItemLeft" align="right" valign="top"><a id="a2c86cc64e596ebc9f16e50bb593ab8f4" name="a2c86cc64e596ebc9f16e50bb593ab8f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>neighbours</b></td></tr>
+<tr class="separator:a2c86cc64e596ebc9f16e50bb593ab8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edf396a0e39800b8d11360093a43148" id="r_a3edf396a0e39800b8d11360093a43148"><td class="memItemLeft" align="right" valign="top"><a id="a3edf396a0e39800b8d11360093a43148" name="a3edf396a0e39800b8d11360093a43148"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="separator:a3edf396a0e39800b8d11360093a43148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323c711a8b33e9f50f6a1112ee8437df" id="r_a323c711a8b33e9f50f6a1112ee8437df"><td class="memItemLeft" align="right" valign="top"><a id="a323c711a8b33e9f50f6a1112ee8437df" name="a323c711a8b33e9f50f6a1112ee8437df"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>score</b></td></tr>
+<tr class="separator:a323c711a8b33e9f50f6a1112ee8437df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Pre-defined Queue data structure.
+<div class="textblock"><pre class="fragment">Pre-defined Graph Node data structure.
 
 Attributes:
-    self.data: The stack data is achieved by a Pyhton List object.
+    self.position: The node's 2D Position in a matrix
+    self.index = The node's indenty ID, should be assigned uniquely
+    self.neighbours = Indenty IDs of the node's beighbour nodes
+    self.state = The node's state for visualizing
+    self.score The node's score for finding the shortest path
 </pre> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2d58dd944ec08ea8f0924e50e00af819" name="a2d58dd944ec08ea8f0924e50e00af819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d58dd944ec08ea8f0924e50e00af819">&#9670;&#160;</a></span>pop()</h2>
+<a id="a264ca6207ad939a2ecfe5296918fa73e" name="a264ca6207ad939a2ecfe5296918fa73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264ca6207ad939a2ecfe5296918fa73e">&#9670;&#160;</a></span>set_neighbours()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">data_structure.Queue.pop </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Pop the element on the front of the queue.
-
-Input: None
-Return: The poped element on the front of the queue
-</pre> 
-</div>
-</div>
-<a id="a8ed28d9bba618246b79ad3a79fa8e281" name="a8ed28d9bba618246b79ad3a79fa8e281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ed28d9bba618246b79ad3a79fa8e281">&#9670;&#160;</a></span>push()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">data_structure.Queue.push </td>
+          <td class="memname">data_structure.GraphNode.set_neighbours </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -142,7 +134,7 @@ Return: The poped element on the front of the queue
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>push_data</em>&#160;</td>
+          <td class="paramname"><em>neighbours</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -151,9 +143,9 @@ Return: The poped element on the front of the queue
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Push a new element to the end of the queue.
+<pre class="fragment">Set the node's neighbours' indices
 
-Input: New element
+Input: Neighbours' indices
 Return: None
 </pre> 
 </div>

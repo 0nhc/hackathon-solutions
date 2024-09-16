@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['maze_0',['Maze',['../classmaze_1_1Maze.html',1,'maze']]],
-  ['mazevisualizer_1',['MazeVisualizer',['../classmaze__visualizer_1_1MazeVisualizer.html',1,'maze_visualizer']]]
+  ['graphnode_0',['GraphNode',['../classdata__structure_1_1GraphNode.html',1,'data_structure']]]
 ];

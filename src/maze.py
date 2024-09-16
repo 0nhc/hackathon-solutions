@@ -1,4 +1,4 @@
-from data_structure import Node
+from data_structure import GraphNode
 from state_define import *
 import numpy as np
 import random
@@ -11,7 +11,7 @@ class Maze:
         
         self.nodes = []
         self.position_to_node_index_table = {}
-        self.init_node_to_be_wall_posibility = 0.35
+        self.init_node_to_be_wall_posibility = 0.65
         self.start_node_index = 0
         self.goal_node_index = 0
         
@@ -22,7 +22,7 @@ class Maze:
                 p = [i,j]
                 neighbours = [[p[0]-1,p[1]], [p[0],p[1]+1], [p[0]+1,p[1]], [p[0],p[1]-1]]
                 neighbours = self._neighbours_filter(neighbours)
-                new_node = Node(position=p, index=node_index, neighbours=neighbours, state=INIT)
+                new_node = GraphNode(position=p, index=node_index, neighbours=neighbours, state=INIT)
                 self.position_to_node_index_table[str(p)] = node_index
                 self.nodes.append(new_node)
                 node_index += 1
