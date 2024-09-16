@@ -5,18 +5,26 @@ This script includes every possible state for a maze node.
 These states are both used for path planning and visualizing.
 """
 
-INIT = 0 # The node has not been processed yet.
+# The node has not been processed yet.
+INIT = 0
 
-WALL = 1 # The node is a wall and cannot be traversed.
+# The node is a wall and cannot be traversed.
+WALL = 1
 
-FREE = 2 # The node is a free space and can be traversed
+# The node is a free space and can be traversed
+FREE = 2
 
-START = 3 # The node is the starting point of the maze.
+# The node is the starting point of the maze.
+START = 3
 
-GOAL = 4 # The node is the goal point of the maze.
+# The node is the goal point of the maze.
+GOAL = 4
 
-VISITING = 5 # The node is currently being visited.
+# The node is currently being visited.
+VISITING = 5
 
-VISITED = 6 # The node has been visited and processed.
+# The node has been visited and processed.
+VISITED = 6
 
-FINAL_PATH = 7 # The node is part of the final path from start to goal.
+# The node is part of the final path from start to goal.
+FINAL_PATH = 7
